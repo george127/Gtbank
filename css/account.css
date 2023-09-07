@@ -1,0 +1,237 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  }
+  
+  body{
+    text-decoration: none;
+  }
+  
+  /* ======== Header ======= */
+  .head .container{
+    padding: 20px 0px;
+  }
+
+  .header{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: 700;
+  }
+
+  .header .btn{
+    background-color: orangered;
+    border: none;
+    outline: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: 700;
+    color: #fff;
+    box-shadow: 0px 1px 30px 3px rgba(212, 78, 0, 0.4);
+    transition: all 1000ms ease-in-out;
+  }
+
+  .header .btn p{
+    margin-bottom: 0px;
+  }
+
+  .header .text{
+    text-decoration: none;
+    color: #333;
+  }
+
+  .header .image{
+    width: 100%;
+  }
+
+  .header .image img{
+    width: 90px;
+    height: 100px;
+    float: right;
+  }
+
+  @media (max-width: 767px){
+    .head .container{
+      padding: 20px 10px;
+    }
+    .header a{
+      display: none;
+    }
+  }
+/* ====== End Header ======= */
+
+/* ====== Account ======= */
+  .account{
+    background-color: #f7f7f7;
+    padding: 90px 0;
+  }
+
+  .account .container{
+    display: flex;
+    gap: 40px;
+  }
+
+  .container .text-description{
+    width: 100%;
+    text-align: justify;
+  }
+
+  .container .text-description p{
+    color: #8b8b8b;
+    font-weight: 500;
+  }
+
+  .container .text-description h2{
+    color: orangered;
+  }
+
+  .container .text-description .description{
+    font-weight: 400;
+    background-color: #fff;
+    width: 330px;
+    padding: 20px;
+    border: 1px solid #dfdfdf;
+  }
+
+  .container .text-description img{
+    width: 170px;
+    height: 170px;
+    margin-top: -36px;
+  }
+
+  .container .text-description ul{
+    color: #525252;
+  }
+
+  .container .text-description:nth-child(2){
+    border-left: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    padding: 0 30px;
+    letter-spacing: 1px;
+    margin-bottom: 110px;
+  }
+
+  .container .text-description .btn{
+    background-color: orangered;
+    background-image: linear-gradient(to right, #f08731,orangered);
+    width: 300px;
+    font-size: 14px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: #fff;
+    transition: all 1000ms ease-in-out;
+  }
+
+  .container .text-description .btn:hover{
+    color: #333;
+  }
+
+  @media (max-width: 991px){
+    .account .container{
+      display: block;
+    }
+
+    .container .text-description h2{
+      font-size: 23px;
+    }
+
+    .container .text-description h3{
+      font-size: 20px;
+    }
+
+    .container .text-description:nth-child(2){
+      border: none;
+      padding: 0;
+      letter-spacing: normal;
+      margin-bottom: 0px;
+    }
+
+    .container .text-description .description{
+      width: 100%;
+    }
+
+    .container .text-description .btn{
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px){
+    .container .text-description .btn{
+      font-size: 10px;
+    }
+  }
+/* ====== End Account ======= */
+
+/* ====== Footer ======= */
+footer{
+  background-color: #f7f7f7;
+}
+
+.container-item{
+  background: url("../img/GrayMap.png") no-repeat center center / contain;
+}
+
+.container-item{
+  display: flex;
+}
+
+.container-item .item{
+  width: 500px;
+  font-size: 15px;
+  color: #333;
+}
+
+.container-item .item p{
+  margin-bottom: 7em;
+}
+
+.container-item .link-container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 60px;
+}
+
+.link-container .link a{
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  line-height: 11px;
+}
+
+@media (max-width: 991px){
+  .container-item{
+    display: block;
+  }
+
+  .container-item .item{
+    width: 100%;
+    font-size: 15px;
+    color: #333;
+  }
+
+  .container-item .item p{
+    margin-bottom: 2em;
+  }
+
+  .container-item .link-container{
+    justify-content: left;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px){
+  footer .container-item{
+    background: url("../img/GrayMap.png") repeat center center / contain;
+  } 
+
+  .container-item .link-container{
+    display: block;
+  }
+
+  .link-container .link{
+    margin-bottom: 2em;
+  }
+}
+/* ====== End Footer ======= */

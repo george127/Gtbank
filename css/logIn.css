@@ -1,0 +1,330 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+    
+body{
+    text-decoration: none;
+}
+
+.logo{
+    display: flex;
+    justify-content: right;
+    padding: 10px 0;
+}
+
+.logo img{
+    width: 68px;
+    height: 78px;
+    margin: 0 100px;
+}
+
+@media(max-width: 1199px) {
+    .logo img{
+        margin: 0;
+    }
+}
+
+.header .content{
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: space-between;
+    background-color: #c7c7c7;
+    margin: 0 100px;
+    padding: 15px 10px;
+    border-radius: 5px;
+}
+
+.header .content .text{
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.header .content img{
+    width: 43px;
+    height: 33px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}
+
+@media(max-width: 1199px){
+    .header .content{
+        margin: 0;
+    }
+}
+
+.items-container .collection{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 100px;
+    gap: 10px;
+}
+
+.items-container  .items{
+    flex: 1 1 200px;
+}
+
+@media(max-width: 1199px){
+    .items-container .collection{
+        margin: 0;
+    }
+}
+
+@media(max-width: 670px) {
+    .items-container .collection{
+        display: block;
+    }
+}
+
+/* ========= Button ========== */
+.items-container .button .btn{
+    background-image: linear-gradient(to bottom, green, black);
+    text-align: center;
+    padding: 10px 40px;
+    border-radius: 10px;
+}
+
+.items-container .button .btn p{
+    font-size: 25px;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.items-container .button .btn img{
+    width: 90px;
+    height: 90px;
+}
+
+@media(max-width: 670px){
+    .items-container .button .btn{
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+}
+
+/* ========= Intruction ========== */
+.intruction-container .title{
+    font-weight: bold;
+    color: #333;
+}
+
+.intruction-container .instruction .text-description{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #ebebeb;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    width: 330px;
+    margin-bottom: 10px;
+}
+
+.intruction-container .instruction .text-description img{
+    width: 100px;
+    height: 70px;
+}
+
+.intruction-container .instruction .text-description p{
+    font-size: 13px;
+    line-height: 23px;
+    color: gray;
+}
+
+.intruction-container .instruction{
+    display: flex;
+    position: relative;
+}
+
+.intruction-container .instruction .circle{
+    background-color: #333;
+    margin: 20px 0 0 310px;  
+    position: absolute;  
+    text-align: center;
+    border-radius: 50px;
+    padding: 7px 15px;
+    border: 3px solid #a7a7a7;
+}
+
+.intruction-container .instruction .circle p{
+    color: #fff;
+    margin: 0;
+}
+
+.items .link{
+    font-size: 12px;
+    color: #a7a7a7;
+    text-decoration: none;
+}
+
+.items .link:hover{
+    text-decoration: underline;
+}
+
+@media(max-width: 991px) {
+    .intruction-container .instruction .text-description{
+        width: 100%;
+    }
+
+    .intruction-container .instruction .circle{
+    margin: 20px 0 0 240px;  
+}
+}
+
+@media(max-width: 767px){
+    .intruction-container .instruction .circle{
+        margin: 20px 0 0 290px;  
+    }
+}
+
+@media(max-width: 670px){
+    .items{
+        margin-bottom: 20px;
+    }
+
+    .intruction-container .instruction .circle{
+        margin: 72px 0 0 200px;  
+        padding: 2px 7px;
+    }
+
+    .intruction-container .instruction .circle p{
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 480px){
+    .intruction-container .instruction .circle{
+        display: none;
+    }
+}
+/* ========= End Intruction ========== */
+
+/* ========= Dropdown ========== */
+.dropdown-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-container p{
+    font-size: 13px;
+    color: #888888;
+}
+
+.dropdown-container .dropdown .dropbtn{
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border: none;
+    display: block;
+    width: 150px;
+    align-items: center;
+    cursor: pointer;
+    background-color: #e2e2e2;
+    border-radius: 4px;
+    font-size: 13px;
+    padding: 6px;
+    border: 1px solid #b3b3b3;
+    color: #333;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-container .dropdown .dropbtn span{
+    padding: 7px 20px 8px 0;
+    border-right: 1px solid #b3b3b3;
+}
+
+.dropdown-container .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 150px;
+    z-index: 1;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 1.3s ease, max-height 1.3s ease;
+    position: absolute;
+    margin-top: -16px;
+}
+
+.dropdown-container .dropdown .dropdown-content.active {
+    opacity: 1;
+    max-height: 400px; 
+}
+
+.dropdown-container .dropdown .dropdown-content{
+display: block;
+}
+
+.dropdown-container .dropdown .dropdown-content p {
+    color: black;
+    margin: 10px 0 0 7px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    transition: all 1000ms ease-in-out;
+    border-bottom: 1px solid #cfcfcf;
+    
+}
+
+.dropdown-container .dropdown .dropdown-content p img{
+    width: 16px;
+    height: 14px;
+    margin-right: 4px;
+}
+
+.dropdown-container .dropdown .dropdown-content p:hover{
+  background-color: #a7a7a7;
+}
+/* ========= End Dropdown ========== */
+
+/* ========= Alert ========== */
+.alert-container{
+    background-color: #c7c7c7;
+    padding: 20px;
+    font-size: 13px;
+    line-height: 23px;
+    border-radius: 5px;
+    border: 1px solid #d8d8d8;
+    color: gray;
+    background-image: linear-gradient(to top, #e7e7e7, #fff, #fff);
+}
+
+.alert-container .title{
+    color: rgb(211, 57, 1);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* ========= footer ========== */
+footer .link{
+    margin: 0 100px;
+    background-color: rgb(211, 57, 1);
+    display: flex;
+    justify-content: right;
+    flex-flow: wrap;
+    font-size: 11px;
+    padding: 10px;
+    gap: 6px;
+    background-image: linear-gradient(to top, rgb(190, 52, 1), rgb(211, 57, 1), rgb(211, 57, 1));
+}
+
+footer .link a{
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .link a:hover{
+    text-decoration: underline;
+}
+
+@media(max-width: 1199px){
+    footer .link{
+        margin: 0;
+    }
+}
